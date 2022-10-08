@@ -20,6 +20,9 @@ class myapp extends StatelessWidget {
                 radius: 80,
                 backgroundImage: AssetImage("Image/pp.jpg"),
               ),
+              SizedBox(
+                height: 10,
+              ),
               Text(
                 "Saif Ahammod Khan",
                 style: TextStyle(
@@ -37,6 +40,109 @@ class myapp extends StatelessWidget {
                   fontWeight: FontWeight.normal,
                   fontStyle: FontStyle.normal,
                   fontFamily: "KaushanScript",
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 50),
+                padding: EdgeInsets.all(10),
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.location_on,
+                      color: Colors.blue,
+                      size: 30,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      "Bashundhara R/A, Dhaka",
+                      style: TextStyle(
+                          color: Colors.blue,
+                          fontFamily: "KaushanScript",
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20.0),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 50),
+                padding: EdgeInsets.all(10),
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.phone,
+                      color: Colors.blue,
+                      size: 30,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      "+880 1917 089109",
+                      style: TextStyle(
+                          color: Colors.blue,
+                          fontFamily: "KaushanScript",
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20.0),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 50),
+                padding: EdgeInsets.all(10),
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.email,
+                      color: Colors.blue,
+                      size: 30,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      "saif.ahammod@gmail.com",
+                      style: TextStyle(
+                          color: Colors.blue,
+                          fontFamily: "KaushanScript",
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20.0),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 50),
+                padding: EdgeInsets.all(10),
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.computer,
+                      color: Colors.blue,
+                      size: 30,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      "saifahammod.me",
+                      style: TextStyle(
+                          color: Colors.blue,
+                          fontFamily: "KaushanScript",
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20.0),
+                    ),
+                  ],
                 ),
               ),
               SizedBox(
