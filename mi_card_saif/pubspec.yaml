@@ -74,9 +74,13 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: ComforterBrush
+
+    - family: KaushanScript
       fonts:
-        - asset: font/ComforterBrush-Regular.ttf
+        - asset: font/KaushanScript-Regular.ttf
+#  - family: ComforterBrush
+#      fonts:
+#          - asset: font/ComforterBrush-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
