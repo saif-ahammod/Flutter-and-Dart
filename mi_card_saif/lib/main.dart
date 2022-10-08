@@ -12,7 +12,19 @@ class myapp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.blue,
         body: SafeArea(
-          child: Column(),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              CircleAvatar(
+                radius: 50,
+                backgroundColor: Colors.red,
+              ),
+              SizedBox(
+                width: double.infinity,
+              )
+            ],
+          ),
         ),
       ),
     );
