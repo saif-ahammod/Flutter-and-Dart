@@ -17,8 +17,8 @@ class myapp extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
-                radius: 50,
-                backgroundColor: Colors.red,
+                radius: 80,
+                backgroundImage: AssetImage("Image/pp.jpg"),
               ),
               SizedBox(
                 width: double.infinity,
