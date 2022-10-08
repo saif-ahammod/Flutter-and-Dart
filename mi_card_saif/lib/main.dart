@@ -23,11 +23,20 @@ class myapp extends StatelessWidget {
               Text(
                 "Saif Ahammod Khan",
                 style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 50.0,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                    fontFamily: "ComforterBrush"),
+              ),
+              Text(
+                "Flutter Developper",
+                style: TextStyle(
                   color: Colors.white,
                   fontSize: 30.0,
-                  fontWeight: FontWeight.bold,
-                  fontStyle: FontStyle.italic,
-                  fontFamily:
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FontStyle.normal,
+                  fontFamily: "ComforterBrush",
                 ),
               ),
               SizedBox(
