@@ -44,105 +44,85 @@ class myapp extends StatelessWidget {
               ),
               SizedBox(
                 height: 10,
-              ),
-              Container(
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 50),
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.location_on,
-                      color: Colors.blue,
-                      size: 30,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      "Bashundhara R/A, Dhaka",
-                      style: TextStyle(
-                          color: Colors.blue,
-                          fontFamily: "KaushanScript",
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20.0),
-                    ),
-                  ],
+                width: 200,
+                child: Divider(
+                  color: Colors.blue[200],
                 ),
               ),
-              Container(
+              Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 50),
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.phone,
-                      color: Colors.blue,
-                      size: 30,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      "+880 1917 089109",
-                      style: TextStyle(
-                          color: Colors.blue,
-                          fontFamily: "KaushanScript",
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20.0),
-                    ),
-                  ],
+                child: ListTile(
+                  leading: Icon(
+                    Icons.location_on,
+                    color: Colors.blue,
+                    size: 30,
+                  ),
+                  title: Text(
+                    "Bashundhara R/A, Dhaka",
+                    style: TextStyle(
+                        color: Colors.blue,
+                        fontFamily: "KaushanScript",
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20.0),
+                  ),
                 ),
               ),
-              Container(
+              Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 50),
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.email,
-                      color: Colors.blue,
-                      size: 30,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      "saif.ahammod@gmail.com",
-                      style: TextStyle(
-                          color: Colors.blue,
-                          fontFamily: "KaushanScript",
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20.0),
-                    ),
-                  ],
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.blue,
+                    size: 30,
+                  ),
+                  title: Text(
+                    "+880 1917 089109",
+                    style: TextStyle(
+                        color: Colors.blue,
+                        fontFamily: "KaushanScript",
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20.0),
+                  ),
                 ),
               ),
-              Container(
+              Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 50),
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.computer,
-                      color: Colors.blue,
-                      size: 30,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      "saifahammod.me",
-                      style: TextStyle(
-                          color: Colors.blue,
-                          fontFamily: "KaushanScript",
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20.0),
-                    ),
-                  ],
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.blue,
+                    size: 30,
+                  ),
+                  title: Text(
+                    "saif.ahammod@gmail.com",
+                    style: TextStyle(
+                        color: Colors.blue,
+                        fontFamily: "KaushanScript",
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20.0),
+                  ),
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 50),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.computer,
+                    color: Colors.blue,
+                    size: 30,
+                  ),
+                  title: Text(
+                    "saifahammod.me",
+                    style: TextStyle(
+                        color: Colors.blue,
+                        fontFamily: "KaushanScript",
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20.0),
+                  ),
                 ),
               ),
               SizedBox(
@@ -155,6 +135,34 @@ class myapp extends StatelessWidget {
     );
   }
 }
+// Card(
+// color: Colors.white,
+// margin: EdgeInsets.symmetric(vertical: 10, horizontal: 50),
+// child: Padding(
+// padding: const EdgeInsets.all(10),
+// child: Row(
+// children: <Widget>[
+// Icon(
+// Icons.computer,
+// color: Colors.blue,
+// size: 30,
+// ),
+// SizedBox(
+// width: 10,
+// ),
+// Text(
+// "saifahammod.me",
+// style: TextStyle(
+// color: Colors.blue,
+// fontFamily: "KaushanScript",
+// fontWeight: FontWeight.bold,
+// fontSize: 20.0),
+// ),
+// ],
+// ),
+// ),
+// ),
+//000000000000000000000000000000000000000000000000000000000000
 // child: Column(
 // // mainAxisSize: MainAxisSize.min,
 // mainAxisAlignment: MainAxisAlignment.center,
