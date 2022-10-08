@@ -20,6 +20,16 @@ class myapp extends StatelessWidget {
                 radius: 80,
                 backgroundImage: AssetImage("Image/pp.jpg"),
               ),
+              Text(
+                "Saif Ahammod Khan",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30.0,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
+                  fontFamily:
+                ),
+              ),
               SizedBox(
                 width: double.infinity,
               )
