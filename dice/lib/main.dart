@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MaterialApp(
     home: Scaffold(
-        backgroundColor: Colors.black54,
+        backgroundColor: Colors.blue,
         appBar: AppBar(
           title: Text("Dice"),
-          backgroundColor: Colors.black,
+          backgroundColor: Colors.blueAccent,
         )),
   ));
 }
