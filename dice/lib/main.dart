@@ -30,34 +30,29 @@ class _DicePageState extends State<DicePage> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Row(
-        children: <Widget>[
-          Expanded(
+      child: FlatButton(
+        onPressed: () {
+          setState(() {
+            RandomNumber1 = Random().nextInt(6) + 1;
+            RandomNumber2 = Random().nextInt(6) + 1;
+          });
+        },
+        child: Row(
+          children: <Widget>[
+            Expanded(
               child: Padding(
-            padding: const EdgeInsets.all(8),
-            child: FlatButton(
-              onPressed: () {
-                setState(() {
-                  RandomNumber1 = Random().nextInt(6) + 1;
-                });
-              },
-              child: Image.asset("image/dice$RandomNumber1.png"),
+                padding: const EdgeInsets.all(8),
+                child: Image.asset("image/dice$RandomNumber1.png"),
+              ),
             ),
-          )),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(8),
-              child: FlatButton(
-                onPressed: () {
-                  setState(() {
-                    RandomNumber2 = Random().nextInt(6) + 1;
-                  });
-                },
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(8),
                 child: Image.asset("image/dice$RandomNumber2.png"),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
