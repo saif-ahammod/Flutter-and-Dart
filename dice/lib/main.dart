@@ -15,11 +15,18 @@ void main() {
   );
 }
 
-class DicePage extends StatelessWidget {
+class DicePage extends StatefulWidget {
+  const DicePage({Key? key}) : super(key: key);
+
+  @override
+  State<DicePage> createState() => _DicePageState();
+}
+
+class _DicePageState extends State<DicePage> {
   // This widget is the root of your application.
+  var RandomNumber1 = 4;
   @override
   Widget build(BuildContext context) {
-    var RandomNumber1 = 4;
     return Center(
       child: Row(
         children: <Widget>[
@@ -28,6 +35,9 @@ class DicePage extends StatelessWidget {
             padding: const EdgeInsets.all(8),
             child: FlatButton(
               onPressed: () {
+                setState(() {
+                  RandomNumber1 = 6;
+                });
                 print("Left Button Pressed");
               },
               child: Image.asset("image/dice$RandomNumber1.png"),
@@ -49,3 +59,38 @@ class DicePage extends StatelessWidget {
     );
   }
 }
+//
+// class DicePage extends StatelessWidget {
+//   // This widget is the root of your application.
+//   @override
+//   Widget build(BuildContext context) {
+//     var RandomNumber1 = 4;
+//     return Center(
+//       child: Row(
+//         children: <Widget>[
+//           Expanded(
+//               child: Padding(
+//             padding: const EdgeInsets.all(8),
+//             child: FlatButton(
+//               onPressed: () {
+//                 print("Left Button Pressed");
+//               },
+//               child: Image.asset("image/dice$RandomNumber1.png"),
+//             ),
+//           )),
+//           Expanded(
+//             child: Padding(
+//               padding: const EdgeInsets.all(8),
+//               child: FlatButton(
+//                 onPressed: () {
+//                   print("Right Button Pressed");
+//                 },
+//                 child: Image.asset("image/dice$RandomNumber1.png"),
+//               ),
+//             ),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
