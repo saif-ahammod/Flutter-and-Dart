@@ -19,6 +19,7 @@ class DicePage extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    var RandomNumber1 = 4;
     return Center(
       child: Row(
         children: <Widget>[
@@ -29,7 +30,7 @@ class DicePage extends StatelessWidget {
               onPressed: () {
                 print("Left Button Pressed");
               },
-              child: Image.asset("image/dice1.png"),
+              child: Image.asset("image/dice$RandomNumber1.png"),
             ),
           )),
           Expanded(
@@ -39,7 +40,7 @@ class DicePage extends StatelessWidget {
                 onPressed: () {
                   print("Right Button Pressed");
                 },
-                child: Image.asset("image/dice2.png"),
+                child: Image.asset("image/dice$RandomNumber1.png"),
               ),
             ),
           ),
