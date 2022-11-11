@@ -25,6 +25,13 @@ class Magic8Ball extends StatefulWidget {
 class _Magic8BallState extends State<Magic8Ball> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(
+      child: Expanded(
+        child: Padding(
+          padding: EdgeInsets.all(15),
+          child: Image.asset("Image/ball1.png"),
+        ),
+      ),
+    );
   }
 }
