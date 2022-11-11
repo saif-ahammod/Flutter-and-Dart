@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const Magic8Ball());
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.black12,
+        appBar: AppBar(
+          backgroundColor: Colors.blueGrey,
+          title: Text("Magic 8 Ball"),
+        ),
+        body: Magic8Ball(),
+      ),
+    ),
+  );
 }
 
 class Magic8Ball extends StatefulWidget {
