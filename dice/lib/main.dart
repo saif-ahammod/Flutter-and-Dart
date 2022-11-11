@@ -27,19 +27,19 @@ class _DicePageState extends State<DicePage> {
   // This widget is the root of your application.
   var RandomNumber1 = 2;
   var RandomNumber2 = 1;
-  void ChangeDiceFace()
-  {
+  void ChangeDiceFace() {
     setState(() {
       RandomNumber1 = Random().nextInt(6) + 1;
       RandomNumber2 = Random().nextInt(6) + 1;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Center(
       child: FlatButton(
         onPressed: () {
-          ChangeDiceFace()
+          ChangeDiceFace();
         },
         child: Row(
           children: <Widget>[
