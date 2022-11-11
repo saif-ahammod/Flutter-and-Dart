@@ -24,12 +24,18 @@ class Magic8Ball extends StatefulWidget {
 
 class _Magic8BallState extends State<Magic8Ball> {
   @override
+  var BallNum = 5;
   Widget build(BuildContext context) {
     return Center(
-      child: Expanded(
-        child: Padding(
-          padding: EdgeInsets.all(15),
-          child: Image.asset("Image/ball1.png"),
+      child: FlatButton(
+        onPressed: () {
+          print("Button Pressed");
+        },
+        child: Expanded(
+          child: Padding(
+            padding: EdgeInsets.all(15),
+            child: Image.asset("Image/ball$BallNum.png"),
+          ),
         ),
       ),
     );
