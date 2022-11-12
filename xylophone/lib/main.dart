@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const XyloPhoneApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class XyloPhoneApp extends StatelessWidget {
+  const XyloPhoneApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MaterialApp(
+      home: Scaffold(
+        body: SafeArea(
+          child: Container(),
+        ),
+      ),
+    );
   }
 }
