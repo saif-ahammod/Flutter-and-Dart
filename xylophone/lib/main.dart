@@ -11,78 +11,38 @@ class XyloPhoneApp extends StatelessWidget {
     player.play(AssetSource('note$NodeNumber.wav'));
   }
 
+  Expanded KeyBuild(Color KeyColor, int SoundNum) {
+    return Expanded(
+      child: FlatButton(
+        color: KeyColor,
+        onPressed: () {
+          //   final player = AudioPlayer();
+          //   player.play(AssetSource('assets/note1.wav'));
+          playSound(SoundNum);
+        },
+        child: Text(""),
+      ),
+    );
+  }
+
   const XyloPhoneApp({Key? key}) : super(key: key);
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.black,
         body: SafeArea(
             child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            FlatButton(
-              color: Colors.red,
-              onPressed: () {
-                //   final player = AudioPlayer();
-                //   player.play(AssetSource('assets/note1.wav'));
-                playSound(1);
-              },
-              child: Text(""),
-            ),
-            FlatButton(
-              color: Colors.orange,
-              onPressed: () {
-                //   final player = AudioPlayer();
-                //   player.play(AssetSource('assets/note1.wav'));
-                playSound(2);
-              },
-              child: Text(""),
-            ),
-            FlatButton(
-              color: Colors.yellow,
-              onPressed: () {
-                //   final player = AudioPlayer();
-                //   player.play(AssetSource('assets/note1.wav'));
-                playSound(3);
-              },
-              child: Text(""),
-            ),
-            FlatButton(
-              color: Colors.green,
-              onPressed: () {
-                //   final player = AudioPlayer();
-                //   player.play(AssetSource('assets/note1.wav'));
-                playSound(4);
-              },
-              child: Text(""),
-            ),
-            FlatButton(
-              color: Colors.lightBlueAccent,
-              onPressed: () {
-                //   final player = AudioPlayer();
-                //   player.play(AssetSource('assets/note1.wav'));
-                playSound(5);
-              },
-              child: Text(""),
-            ),
-            FlatButton(
-              color: Colors.blueAccent,
-              onPressed: () {
-                //   final player = AudioPlayer();
-                //   player.play(AssetSource('assets/note1.wav'));
-                playSound(6);
-              },
-              child: Text(""),
-            ),
-            FlatButton(
-              color: Colors.purple,
-              onPressed: () {
-                //   final player = AudioPlayer();
-                //   player.play(AssetSource('assets/note1.wav'));
-                playSound(7);
-              },
-              child: Text(""),
-            ),
+            KeyBuild(Colors.red, 1),
+            KeyBuild(Colors.orange, 2),
+            KeyBuild(Colors.yellow, 3),
+            KeyBuild(Colors.green, 4),
+            KeyBuild(Colors.lightBlueAccent, 5),
+            KeyBuild(Colors.blue, 6),
+            KeyBuild(Colors.purple, 7),
           ],
         )),
       ),
