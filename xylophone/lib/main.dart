@@ -16,8 +16,6 @@ class XyloPhoneApp extends StatelessWidget {
       child: FlatButton(
         color: KeyColor,
         onPressed: () {
-          //   final player = AudioPlayer();
-          //   player.play(AssetSource('assets/note1.wav'));
           playSound(SoundNum);
         },
         child: Text(""),
