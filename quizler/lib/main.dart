@@ -1,7 +1,9 @@
 import 'dart:ffi';
 import 'package:flutter/material.dart';
-import 'question.dart';
+import 'package:quizler/Quiz_Brain.dart';
+import 'Quiz_Brain.dart';
 
+QuizBrain quizBrain = QuizBrain();
 void main() {
   runApp(Quizzler());
 }
@@ -38,11 +40,6 @@ class _QuizPageState extends State<QuizPage> {
   // ];
   // List<bool> answer = [false, true, false];
 
-  List<Question> Questionbank = [
-    Question(q: "Rajshahi is the capital of Bangladesh", a: false),
-    Question(q: "Sundarban is a mangrove forest", a: true),
-    Question(q: "Dhaka is less populated city", a: false)
-  ];
   int QuestionNumber = 0;
   @override
   Widget build(BuildContext context) {
@@ -56,7 +53,7 @@ class _QuizPageState extends State<QuizPage> {
             padding: EdgeInsets.all(10.0),
             child: Center(
               child: Text(
-                Questionbank[QuestionNumber].question,
+                quizBrain.Questionbank[QuestionNumber].question,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 25.0,
@@ -80,13 +77,13 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
-                if (Questionbank[QuestionNumber].answer == true) {
+                if (quizBrain.Questionbank[QuestionNumber].answer == true) {
                   print("Answer is correct");
                 } else {
                   print("Answer is wrong");
                 }
                 setState(() {
-                  if (QuestionNumber < Questionbank.length - 1) {
+                  if (QuestionNumber < quizBrain.Questionbank.length - 1) {
                     QuestionNumber++;
                   }
                 });
@@ -109,13 +106,13 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
-                if (Questionbank[QuestionNumber].answer == false) {
+                if (quizBrain.Questionbank[QuestionNumber].answer == false) {
                   print("Answer is correct");
                 } else {
                   print("Answer is wrong");
                 }
                 setState(() {
-                  if (QuestionNumber < Questionbank.length - 1) {
+                  if (QuestionNumber < quizBrain.Questionbank.length - 1) {
                     QuestionNumber++;
                   }
                 });
