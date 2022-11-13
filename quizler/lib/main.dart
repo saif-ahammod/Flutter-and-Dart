@@ -1,4 +1,6 @@
+import 'dart:ffi';
 import 'package:flutter/material.dart';
+import 'question.dart';
 
 void main() {
   runApp(Quizzler());
@@ -28,10 +30,18 @@ class QuizPage extends StatefulWidget {
 
 class _QuizPageState extends State<QuizPage> {
   List<Icon> ScoreKeeper = [];
-  List<String> Questions = [
-    "Rajshahi is the capital of Bangladesh",
-    "Sundarban is a mangrove forest",
-    "Dhaka is less populated city"
+  // List<String> Questions = [
+  //   "Rajshahi is the capital of Bangladesh",
+  //   "Sundarban is a mangrove forest",
+  //   "Dhaka is less populated city",
+  //   "Thank you for participate"
+  // ];
+  // List<bool> answer = [false, true, false];
+
+  List<Question> Questionbank = [
+    Question(q: "Rajshahi is the capital of Bangladesh", a: false),
+    Question(q: "Sundarban is a mangrove forest", a: true),
+    Question(q: "Dhaka is less populated city", a: false)
   ];
   int QuestionNumber = 0;
   @override
@@ -46,7 +56,7 @@ class _QuizPageState extends State<QuizPage> {
             padding: EdgeInsets.all(10.0),
             child: Center(
               child: Text(
-                Questions[QuestionNumber],
+                Questionbank[QuestionNumber].question,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 25.0,
@@ -70,8 +80,15 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
+                if (Questionbank[QuestionNumber].answer == true) {
+                  print("Answer is correct");
+                } else {
+                  print("Answer is wrong");
+                }
                 setState(() {
-                  QuestionNumber++;
+                  if (QuestionNumber < Questionbank.length - 1) {
+                    QuestionNumber++;
+                  }
                 });
 
                 print(QuestionNumber);
@@ -92,8 +109,15 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
+                if (Questionbank[QuestionNumber].answer == false) {
+                  print("Answer is correct");
+                } else {
+                  print("Answer is wrong");
+                }
                 setState(() {
-                  QuestionNumber++;
+                  if (QuestionNumber < Questionbank.length - 1) {
+                    QuestionNumber++;
+                  }
                 });
 
                 print(QuestionNumber);
