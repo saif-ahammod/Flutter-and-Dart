@@ -27,14 +27,13 @@ class QuizPage extends StatefulWidget {
 }
 
 class _QuizPageState extends State<QuizPage> {
-  List<Icon> ScoreKeeper = [
-    Icon(Icons.close, color: Colors.red),
-    Icon(Icons.close, color: Colors.red),
-    Icon(Icons.close, color: Colors.red),
-    Icon(Icons.close, color: Colors.red),
-    Icon(Icons.close, color: Colors.red),
-    Icon(Icons.close, color: Colors.red),
+  List<Icon> ScoreKeeper = [];
+  List<String> Questions = [
+    "Rajshahi is the capital of Bangladesh",
+    "Sundarban is a mangrove forest",
+    "Dhaka is less populated city"
   ];
+  int QuestionNumber = 0;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -47,7 +46,7 @@ class _QuizPageState extends State<QuizPage> {
             padding: EdgeInsets.all(10.0),
             child: Center(
               child: Text(
-                'This is where the question text will go.',
+                Questions[QuestionNumber],
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 25.0,
@@ -71,7 +70,11 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
-                //The user picked true.
+                setState(() {
+                  QuestionNumber++;
+                });
+
+                print(QuestionNumber);
               },
             ),
           ),
@@ -89,6 +92,11 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
+                setState(() {
+                  QuestionNumber++;
+                });
+
+                print(QuestionNumber);
                 //The user picked false.
               },
             ),
