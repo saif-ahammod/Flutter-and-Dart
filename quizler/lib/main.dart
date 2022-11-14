@@ -53,7 +53,7 @@ class _QuizPageState extends State<QuizPage> {
             padding: EdgeInsets.all(10.0),
             child: Center(
               child: Text(
-                quizBrain.Questionbank[QuestionNumber].question,
+                quizBrain.GetQuestionText(),
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 25.0,
@@ -77,18 +77,14 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
-                if (quizBrain.Questionbank[QuestionNumber].answer == true) {
+                if (quizBrain.GetAnswer() == true) {
                   print("Answer is correct");
                 } else {
                   print("Answer is wrong");
                 }
                 setState(() {
-                  if (QuestionNumber < quizBrain.Questionbank.length - 1) {
-                    QuestionNumber++;
-                  }
+                  quizBrain.NextQuestion();
                 });
-
-                print(QuestionNumber);
               },
             ),
           ),
@@ -106,18 +102,15 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
-                if (quizBrain.Questionbank[QuestionNumber].answer == false) {
+                if (quizBrain.GetAnswer() == false) {
                   print("Answer is correct");
                 } else {
                   print("Answer is wrong");
                 }
                 setState(() {
-                  if (QuestionNumber < quizBrain.Questionbank.length - 1) {
-                    QuestionNumber++;
-                  }
+                  quizBrain.NextQuestion();
                 });
 
-                print(QuestionNumber);
                 //The user picked false.
               },
             ),
