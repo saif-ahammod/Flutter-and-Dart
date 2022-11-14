@@ -41,6 +41,23 @@ class _QuizPageState extends State<QuizPage> {
   // List<bool> answer = [false, true, false];
 
   int QuestionNumber = 0;
+  void CheckAnswer(bool UserAnswer) {
+    setState(() {
+      if (quizBrain.GetAnswer() == UserAnswer) {
+        ScoreKeeper.add(Icon(
+          Icons.check,
+          color: Colors.green,
+        ));
+      } else {
+        ScoreKeeper.add(Icon(
+          Icons.close,
+          color: Colors.red,
+        ));
+      }
+      quizBrain.NextQuestion();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -77,14 +94,7 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
-                if (quizBrain.GetAnswer() == true) {
-                  print("Answer is correct");
-                } else {
-                  print("Answer is wrong");
-                }
-                setState(() {
-                  quizBrain.NextQuestion();
-                });
+                CheckAnswer(true);
               },
             ),
           ),
@@ -102,14 +112,7 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
-                if (quizBrain.GetAnswer() == false) {
-                  print("Answer is correct");
-                } else {
-                  print("Answer is wrong");
-                }
-                setState(() {
-                  quizBrain.NextQuestion();
-                });
+                CheckAnswer(false);
 
                 //The user picked false.
               },
