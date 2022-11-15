@@ -30,4 +30,8 @@ class QuizBrain {
       return true;
     }
   }
+
+  void reset() {
+    this._QuestionNum = 0;
+  }
 }

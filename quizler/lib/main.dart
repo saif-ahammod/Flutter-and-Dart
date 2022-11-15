@@ -37,18 +37,24 @@ class _QuizPageState extends State<QuizPage> {
   _onAlertButtonPressed(context) {
     Alert(
       context: context,
-      type: AlertType.error,
-      title: "RFLUTTER ALERT",
-      desc: "Flutter is more awesome with RFlutter Alert.",
+      type: AlertType.success,
+      title: "Congratulation",
+      desc: "You have successfully completed the quiz task",
       buttons: [
         DialogButton(
-          child: Text(
-            "COOL",
-            style: TextStyle(color: Colors.white, fontSize: 20),
-          ),
-          onPressed: () => _onCustomAnimationAlertPressed(context),
-          width: 120,
-        )
+            child: Text(
+              "Continue",
+              style: TextStyle(color: Colors.white, fontSize: 20),
+            ),
+            onPressed: () {
+              setState(() {
+                ScoreKeeper.clear();
+                quizBrain.reset();
+              });
+              _onCustomAnimationAlertPressed(context);
+              width:
+              120;
+            })
       ],
     ).show();
   }
@@ -57,8 +63,8 @@ class _QuizPageState extends State<QuizPage> {
   _onCustomAnimationAlertPressed(context) {
     Alert(
       context: context,
-      title: "RFLUTTER ALERT",
-      desc: "Flutter is more awesome with RFlutter Alert.",
+      title: "Gratjob",
+      desc: "Wanna try again?",
       alertAnimation: fadeAlertAnimation,
     ).show();
   }
@@ -98,7 +104,11 @@ class _QuizPageState extends State<QuizPage> {
           color: Colors.red,
         ));
       }
-      quizBrain.NextQuestion();
+      if (quizBrain.IsFinished()) {
+        _onAlertButtonPressed(context);
+      } else {
+        quizBrain.NextQuestion();
+      }
     });
   }
 
@@ -138,7 +148,6 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
-                _onAlertButtonPressed(context);
                 CheckAnswer(true);
               },
             ),
