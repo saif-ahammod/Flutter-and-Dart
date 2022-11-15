@@ -20,4 +20,14 @@ class QuizBrain {
       _QuestionNum++;
     }
   }
+
+  bool IsFinished() {
+    if (_QuestionNum < _Questionbank.length - 1) {
+      print("false");
+      return false;
+    } else {
+      print("true");
+      return true;
+    }
+  }
 }

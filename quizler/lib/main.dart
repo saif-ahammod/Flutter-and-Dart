@@ -1,6 +1,7 @@
 import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:quizler/Quiz_Brain.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 import 'Quiz_Brain.dart';
 
 QuizBrain quizBrain = QuizBrain();
@@ -32,6 +33,49 @@ class QuizPage extends StatefulWidget {
 
 class _QuizPageState extends State<QuizPage> {
   List<Icon> ScoreKeeper = [];
+  // Alert with single button.
+  _onAlertButtonPressed(context) {
+    Alert(
+      context: context,
+      type: AlertType.error,
+      title: "RFLUTTER ALERT",
+      desc: "Flutter is more awesome with RFlutter Alert.",
+      buttons: [
+        DialogButton(
+          child: Text(
+            "COOL",
+            style: TextStyle(color: Colors.white, fontSize: 20),
+          ),
+          onPressed: () => _onCustomAnimationAlertPressed(context),
+          width: 120,
+        )
+      ],
+    ).show();
+  }
+
+  //Custom animation alert
+  _onCustomAnimationAlertPressed(context) {
+    Alert(
+      context: context,
+      title: "RFLUTTER ALERT",
+      desc: "Flutter is more awesome with RFlutter Alert.",
+      alertAnimation: fadeAlertAnimation,
+    ).show();
+  }
+
+  Widget fadeAlertAnimation(
+    BuildContext context,
+    Animation<double> animation,
+    Animation<double> secondaryAnimation,
+    Widget child,
+  ) {
+    return Align(
+      child: FadeTransition(
+        opacity: animation,
+        child: child,
+      ),
+    );
+  }
   // List<String> Questions = [
   //   "Rajshahi is the capital of Bangladesh",
   //   "Sundarban is a mangrove forest",
@@ -94,6 +138,7 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
+                _onAlertButtonPressed(context);
                 CheckAnswer(true);
               },
             ),
